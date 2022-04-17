@@ -1,0 +1,44 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.231.6/containers/deno
+{
+  "name": "Deno",
+  "build": {
+    "dockerfile": "Dockerfile",
+    // Update 'VARIANT' to pick an Debian OS version: bullseye, buster
+    "args": {
+      "VARIANT": "buster"
+    }
+  },
+  "settings": {
+    // Enables the project as a Deno project
+    "deno.enable": true,
+    // Enables Deno linting for the project
+    "deno.lint": true,
+    // Sets Deno as the default formatter for the project
+    "editor.defaultFormatter": "denoland.vscode-deno",
+    "todohighlight.isEnable": true,
+    "todohighlight.isCaseSensitive": false,
+    "todohighlight.keywords": [
+      {
+        "text": "xxx",
+        "color": "#ff5874",
+        "backgroundColor": "#00000000"
+      },
+      {
+        "text": "fixme",
+        "color": "#ff5874",
+        "backgroundColor": "#00000000"
+      },
+      {
+        "text": "todo",
+        "color": "#81a1c1",
+        "backgroundColor": "#00000000"
+      }
+    ]
+  },
+
+  // This will install the vscode-deno extension
+  "extensions": ["denoland.vscode-deno", "wayou.vscode-todo-highlight"],
+
+  "remoteUser": "vscode"
+}
